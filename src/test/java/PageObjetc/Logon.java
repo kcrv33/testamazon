@@ -7,20 +7,21 @@ import org.openqa.selenium.support.PageFactory;
 
 import Utilities.BaseClass;
 
-public class HomePage {
+public class Logon {
 	
 	WebDriver driver = BaseClass.getDriver();
-	public HomePage() {
+	
+	public Logon() {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//div[@id='nav-tools']/a[2]")
-	public WebElement LogonButton;
+	@FindBy(xpath="//input[@id='ap_email']")
+	public WebElement InputUser;
 	
-	@FindBy(xpath = "//input[@id='twotabsearchtextbox']")
-	public WebElement inputSearch;
+	@FindBy(xpath="//input[@id='continue']")
+	public WebElement ContinueButton;
 	
-	
-	
+			
+			
 
 }
